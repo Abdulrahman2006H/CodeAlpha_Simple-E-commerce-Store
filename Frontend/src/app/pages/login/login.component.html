@@ -1,0 +1,45 @@
+<main class="auth-page">
+  <section class="auth-card">
+    <div class="auth-copy">
+      <span class="eyebrow">Welcome back</span>
+      <h1>Continue your reading journey.</h1>
+      <p>Login to save your cart, track your favorite books, and discover new arrivals picked for you.</p>
+
+      <div class="mini-stack">
+        <div class="book one"></div>
+        <div class="book two"></div>
+        <div class="book three"></div>
+      </div>
+    </div>
+
+    <form class="auth-form" (ngSubmit)="submit()">
+      <h2>Login</h2>
+      <p>Enter your account details.</p>
+
+      <label>
+        Email address
+        <input type="email" name="email" [(ngModel)]="email" placeholder="reader@example.com" required>
+      </label>
+
+      <label>
+        Password
+        <input type="password" name="password" [(ngModel)]="password" placeholder="••••••••" required>
+      </label>
+
+      <div class="form-row">
+        <label class="remember">
+          <input type="checkbox">
+          Remember me
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button class="primary-btn" type="submit">Login</button>
+
+      <span class="switch-text">
+        New to BookMuse?
+        <a routerLink="/register">Create account</a>
+      </span>
+    </form>
+  </section>
+</main>
