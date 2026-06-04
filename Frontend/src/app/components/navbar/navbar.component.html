@@ -1,0 +1,47 @@
+<header class="navbar">
+  <a routerLink="/" class="brand">
+    <span class="brand-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 5.5C4 4.7 4.7 4 5.5 4H10c1.1 0 2 .9 2 2v14c0-1.1-.9-2-2-2H5.5C4.7 18 4 17.3 4 16.5v-11Z"/>
+        <path d="M20 5.5C20 4.7 19.3 4 18.5 4H14c-1.1 0-2 .9-2 2v14c0-1.1.9-2 2-2h4.5c.8 0 1.5-.7 1.5-1.5v-11Z"/>
+        <path d="M7 8h2.5M7 11h2.5M14.5 8H17M14.5 11H17"/>
+      </svg>
+    </span>
+    <span>BookMuse</span>
+  </a>
+
+  <nav class="links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/products" routerLinkActive="active">Categories</a>
+    <a routerLink="/products" routerLinkActive="active">Best Sellers</a>
+    <a routerLink="/products" routerLinkActive="active">New Arrivals</a>
+    <a href="#offers">Offers</a>
+  </nav>
+
+  <div class="actions">
+    <label class="search-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z"/></svg>
+      <input placeholder="Search for books, authors..." />
+    </label>
+
+    <button class="icon-btn" aria-label="Wishlist">
+      <svg viewBox="0 0 24 24"><path d="M20.8 5.6c-1.7-2-4.7-2.1-6.5-.3L12 7.6 9.7 5.3C7.9 3.5 4.9 3.6 3.2 5.6c-1.5 1.8-1.4 4.5.3 6.2L12 20l8.5-8.2c1.7-1.7 1.8-4.4.3-6.2Z"/></svg>
+    </button>
+
+    <a routerLink="/cart" class="cart-btn" aria-label="Cart">
+      <svg viewBox="0 0 24 24"><path d="M6.5 6h14l-1.6 8.1a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.6L5.8 3H3"/><path d="M9.5 20a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6ZM17.5 20a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6Z"/></svg>
+      @if (cartCount() > 0) {
+        <span>{{ cartCount() }}</span>
+      }
+    </a>
+
+    @if (user(); as currentUser) {
+      <button class="user-pill" type="button" (click)="logout()" title="Logout">
+        {{ currentUser.name.charAt(0) }}
+      </button>
+    } @else {
+      <a routerLink="/login" class="login-link">Login</a>
+      <a routerLink="/register" class="join-link">Join</a>
+    }
+  </div>
+</header>
