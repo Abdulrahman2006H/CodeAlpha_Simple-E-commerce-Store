@@ -1,0 +1,152 @@
+.footer {
+  /* margin: 30px 42px 24px; */
+  padding: 38px;
+  /* border-radius: 30px; */
+  background: #021f13;
+  color: #ffffff;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 0.8fr 1.2fr;
+  gap: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(255, 197, 56, 0.14);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: #ffc538;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.footer-brand p,
+.footer-newsletter p {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+.footer-col h4,
+.footer-newsletter h4 {
+  color: #ffc538;
+  margin-bottom: 16px;
+  font-size: 17px;
+}
+
+.footer-col a,
+.footer-bottom a {
+  display: block;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  margin-bottom: 11px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-col a:hover,
+.footer-bottom a:hover {
+  color: #ffc538;
+}
+
+.newsletter-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+}
+
+.newsletter-box input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  background: transparent;
+  padding: 0 10px;
+}
+
+.newsletter-box input::placeholder {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.newsletter-box button {
+  border: 0;
+  padding: 13px 18px;
+  border-radius: 14px;
+  background: #ffc538;
+  color: #021f13;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 34px;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.footer-bottom div {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-bottom a {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    margin: 20px 16px;
+    padding: 26px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-box {
+    flex-direction: column;
+  }
+
+  .newsletter-box input {
+    padding: 14px 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
