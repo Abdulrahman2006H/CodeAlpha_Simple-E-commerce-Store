@@ -1,0 +1,43 @@
+<main class="auth-page register-page">
+  <section class="auth-card">
+    <form class="auth-form" (ngSubmit)="submit()">
+      <h2>Create account</h2>
+      <p>Start building your personal library today.</p>
+
+      <label>
+        Full name
+        <input type="text" name="name" [(ngModel)]="name" placeholder="Abdo Hossam" required>
+      </label>
+
+      <label>
+        Email address
+        <input type="email" name="email" [(ngModel)]="email" placeholder="reader@example.com" required>
+      </label>
+
+      <label>
+        Password
+        <input type="password" name="password" [(ngModel)]="password" placeholder="Create a password" required>
+      </label>
+
+      <button class="primary-btn" type="submit">Create account</button>
+
+      <span class="switch-text">
+        Already have an account?
+        <a routerLink="/login">Login</a>
+      </span>
+    </form>
+
+    <div class="auth-copy">
+      <span class="eyebrow">Join BookMuse</span>
+      <h1>Books, offers, and favorites in one place.</h1>
+      <p>Create your account now. Backend authentication will be connected later using JWT and SQL Server.</p>
+
+      <div class="quote-card">
+        <strong>Reader benefits</strong>
+        <span>Saved cart</span>
+        <span>Wishlist</span>
+        <span>Exclusive discounts</span>
+      </div>
+    </div>
+  </section>
+</main>

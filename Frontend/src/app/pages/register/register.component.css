@@ -1,0 +1,46 @@
+@import '../login/login.component.css';
+
+.register-page .auth-card {
+  grid-template-columns: .92fr 1.08fr;
+}
+
+.quote-card {
+  position: absolute;
+  right: 54px;
+  bottom: 54px;
+  width: 300px;
+  border-radius: 26px;
+  padding: 24px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(16px);
+  display: grid;
+  gap: 13px;
+}
+
+.quote-card strong {
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.quote-card span {
+  color: rgba(255,255,255,.82);
+  padding-left: 18px;
+  position: relative;
+}
+
+.quote-card span::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+@media (max-width: 900px) {
+  .register-page .auth-card { grid-template-columns: 1fr; }
+  .quote-card { display: none; }
+}
