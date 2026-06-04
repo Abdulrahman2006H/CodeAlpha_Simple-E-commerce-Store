@@ -1,0 +1,57 @@
+<main class="products-page container">
+  <div class="page-title">
+    <div>
+      <span>Home › Shop</span>
+      <h1>All Books</h1>
+    </div>
+    <label class="page-search">
+      ⌕
+      <input [ngModel]="search()" (ngModelChange)="search.set($event)" placeholder="Search for books..." />
+    </label>
+  </div>
+
+  <section class="shop-layout">
+    <aside class="filters">
+      <h3>Categories</h3>
+      <div class="category-list">
+        @for (category of categories; track category) {
+          <button [class.active]="selectedCategory() === category" (click)="selectedCategory.set(category)">
+            {{ category }}
+          </button>
+        }
+      </div>
+
+      <div class="filter-group">
+        <h3>Price Range</h3>
+        <div class="range-line"><span></span></div>
+        <div class="range-values"><span>$0</span><span>$50+</span></div>
+      </div>
+
+      <div class="filter-group">
+        <h3>Format</h3>
+        <label><input type="checkbox"> Paperback</label>
+        <label><input type="checkbox"> Hardcover</label>
+        <label><input type="checkbox"> eBook</label>
+      </div>
+
+      <button class="clear-btn">Clear Filters</button>
+    </aside>
+
+    <div class="products-content">
+      <div class="result-bar">
+        <strong>{{ filteredProducts().length }} results found</strong>
+        <select>
+          <option>Popularity</option>
+          <option>Price Low to High</option>
+          <option>Rating</option>
+        </select>
+      </div>
+
+      <div class="product-grid">
+        @for (product of filteredProducts(); track product.id) {
+          <app-product-card [product]="product" />
+        }
+      </div>
+    </div>
+  </section>
+</main>

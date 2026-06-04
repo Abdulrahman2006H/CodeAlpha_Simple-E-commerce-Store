@@ -1,0 +1,152 @@
+.products-page {
+  padding: 32px 0 60px;
+}
+
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.page-title span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.page-title h1 {
+  margin: 8px 0 0;
+  font-family: var(--display-font);
+  font-size: 44px;
+}
+
+.page-search {
+  width: 390px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 1px solid rgba(2, 48, 32, 0.08);
+  padding: 14px 18px;
+  box-shadow: var(--soft-shadow);
+}
+
+.page-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.shop-layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 26px;
+}
+
+.filters,
+.products-content {
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(2, 48, 32, 0.08);
+  border-radius: 28px;
+  box-shadow: var(--card-shadow);
+}
+
+.filters {
+  padding: 24px;
+  height: fit-content;
+  position: sticky;
+  top: 92px;
+}
+
+.filters h3 {
+  margin: 0 0 14px;
+  font-size: 16px;
+}
+
+.category-list {
+  display: grid;
+  gap: 7px;
+}
+
+.category-list button {
+  text-align: left;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.category-list button.active,
+.category-list button:hover {
+  background: var(--green-100);
+  color: var(--green-950);
+}
+
+.filter-group {
+  margin-top: 26px;
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.range-line {
+  height: 5px;
+  background: #d9e7d1;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.range-line span {
+  display: block;
+  width: 70%;
+  height: 100%;
+  background: var(--green-900);
+}
+
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 24px;
+  border: 1px solid var(--green-900);
+  color: var(--green-900);
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: 900;
+}
+
+.products-content {
+  padding: 24px;
+}
+
+.result-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.result-bar select {
+  border: 1px solid rgba(2, 48, 32, 0.08);
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: white;
+}
+
+@media (max-width: 900px) {
+  .shop-layout { grid-template-columns: 1fr; }
+  .filters { position: static; }
+  .page-title { align-items: flex-start; flex-direction: column; }
+  .page-search { width: 100%; }
+}
