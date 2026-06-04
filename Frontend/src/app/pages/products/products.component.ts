@@ -1,7 +1,8 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, OnInit, signal , computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { ProductService } from '../../services/product.service';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-products',
@@ -10,21 +11,42 @@ import { ProductService } from '../../services/product.service';
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
-export class ProductsComponent {
-  private readonly productService = inject(ProductService);
-  readonly products = this.productService.getProducts();
-  readonly categories = ['All Categories', ...this.productService.getCategories()];
-  readonly selectedCategory = signal('All Categories');
-  readonly search = signal('');
+export class ProductsComponent implements OnInit {
+  products: Product[] = [];
+  categories: string[] = ['All', 'Fiction', 'Self Development', 'Business', 'Children', 'History', 'Science', 'Novels'];
 
-  readonly filteredProducts = computed(() => {
-    const category = this.selectedCategory();
-    const term = this.search().trim().toLowerCase();
+  search = signal('');
+  selectedCategory = signal('All');
 
-    return this.products.filter(product => {
-      const matchesCategory = category === 'All Categories' || product.category === category;
-      const matchesSearch = !term || product.title.toLowerCase().includes(term) || product.author.toLowerCase().includes(term);
-      return matchesCategory && matchesSearch;
+  loading = true;
+
+  constructor(private productService: ProductService) {}
+
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe({
+      next: (data) => {
+        this.products = data;
+        this.loading = false;
+      },
+      error: (err) => {
+        console.error('Error loading products:', err);
+        this.loading = false;
+      }
     });
+  }
+  filteredProducts = computed(() => {
+  const searchValue = this.search().toLowerCase().trim();
+  const category = this.selectedCategory();
+
+  return this.products.filter(product => {
+    const matchesSearch =
+      product.title.toLowerCase().includes(searchValue) ||
+      product.author.toLowerCase().includes(searchValue);
+
+    const matchesCategory =
+      category === 'All' || product.category === category;
+
+    return matchesSearch && matchesCategory;
   });
+});
 }

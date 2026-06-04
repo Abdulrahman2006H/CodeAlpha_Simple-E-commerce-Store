@@ -20,7 +20,18 @@ export class RegisterComponent {
 
   submit(): void {
     if (!this.name || !this.email || !this.password) return;
-    this.authService.register(this.name, this.email, this.password);
+this.authService.register({
+  name: this.name,
+  email: this.email,
+  password: this.password
+}).subscribe({
+  next: (res) => {
+    this.router.navigateByUrl('/');
+  },
+  error: (err) => {
+    console.error('Registration failed', err);
+  }
+});
     this.router.navigateByUrl('/');
   }
 }

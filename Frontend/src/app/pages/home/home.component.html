@@ -1,0 +1,96 @@
+<main class="home container">
+  <section class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">Fresh reads every day</span>
+      <h1>Find your next <span>favorite book</span></h1>
+      <p>Explore thousands of books across every genre. Fast delivery, cozy reading, and hand-picked recommendations.</p>
+      <div class="hero-actions">
+        <a routerLink="/products" class="gold-btn">Shop Now →</a>
+        <a routerLink="/products" class="secondary-btn">Browse Categories</a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="badge">New<br>Arrivals</div>
+      <div class="plant"></div>
+      <div class="book-stack">
+        <div class="book book-one">The Quiet Mind</div>
+        <div class="book book-two">Echoes of Tomorrow</div>
+        <div class="book book-three">Beyond the Horizon</div>
+      </div>
+    </div>
+
+  </section>
+  <h2>Features</h2>
+  <div class="hero-features">
+    <div><img src="../../../assets/icons/delivery.svg" alt=""><strong>Free delivery</strong><span>on orders over $25</span></div>
+    <div><img src="../../../assets/icons/return.svg" alt=""><strong>Easy returns</strong><span>within 30 days</span></div>
+    <div><img src="../../../assets/icons/shield.svg" alt=""><strong>Secure payment</strong><span>100% protected</span></div>
+    <div><img src="../../../assets/icons/support.svg" alt=""><strong>24/7 Support</strong><span>We're here to help</span></div>
+  </div>
+
+  <div class="section-head">
+    <h2>Shop by Categories</h2>
+    <a routerLink="/products">See all</a>
+  </div>
+
+  <section class="categories">
+    @for (category of categories; track category.name) {
+      <a routerLink="/products" class="category-card">
+        <img class="category-svg" [src]="category.icon" [alt]="category.name">
+        <strong>{{ category.name }}</strong>
+      </a>
+    }
+  </section>
+
+  <div class="section-head">
+    <h2>Books</h2>
+    <a routerLink="/products">View all</a>
+  </div>
+
+  <section class="product-grid">
+    @for (product of products.slice(0, 6); track product.id) {
+      <app-product-card [product]="product" />
+    }
+  </section>
+
+  <section id="offers" class="offers">
+    <div class="offer dark">
+      <div>
+        <span>Limited Offer</span>
+        <h3>Free delivery over $25</h3>
+        <p>Across the U.S. on all orders</p>
+        <a routerLink="/products" class="gold-btn">Shop Now →</a>
+      </div>
+      <div class="offer-icon"><img src="../../../assets/icons/delivery.svg" alt=""></div>
+    </div>
+    <div class="offer light">
+      <div>
+        <span>Students</span>
+        <h3>Student Discount</h3>
+        <p>Get extra 10% off with student ID</p>
+        <a routerLink="/products" class="secondary-btn">Learn More →</a>
+      </div>
+      <div class="book-pile"><img src="../../../assets/icons/graduate.svg" alt=""></div>
+    </div>
+  </section>
+
+  <div class="section-head">
+    <h2>New Arrivals</h2>
+    <a routerLink="/products">View all</a>
+  </div>
+
+  <section class="product-grid arrivals">
+    @for (product of products.slice(2, 8); track product.id) {
+      <app-product-card [product]="product" />
+    }
+  </section>
+
+  <section class="trust-strip">
+    <div><img src="../../../assets/icons/original.svg" alt=""><strong>100% Original Books</strong><span>Authentic & Quality</span></div>
+    <div><img src="../../../assets/icons/card.svg" alt=""><strong>Secure Payments</strong><span>Safe & Encrypted</span></div>
+    <div><img src="../../../assets/icons/return.svg" alt=""><strong>30-Day Returns</strong><span>Hassle-Free Returns</span></div>
+    <div><img src="../../../assets/icons/support.svg" alt=""><strong>24/7 Support</strong><span>We're Here to Help</span></div>
+  </section>
+</main>
+<app-footer></app-footer>

@@ -19,7 +19,17 @@ export class LoginComponent {
 
   submit(): void {
     if (!this.email || !this.password) return;
-    this.authService.login(this.email, this.password);
+this.authService.login({
+  email: this.email,
+  password: this.password
+}).subscribe({
+  next: (res) => {
+    this.router.navigateByUrl('/');
+  },
+  error: (err) => {
+    console.error('Login failed', err);
+  }
+});
     this.router.navigateByUrl('/');
   }
 }
