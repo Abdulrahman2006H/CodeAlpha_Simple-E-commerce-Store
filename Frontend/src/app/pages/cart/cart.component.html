@@ -1,0 +1,52 @@
+<main class="cart-page container">
+  <section class="cart-panel">
+    <div class="cart-head">
+      <div>
+        <span>Shopping Cart</span>
+        <h1>Your Cart ({{ cartService.count() }})</h1>
+      </div>
+      <a routerLink="/products">Continue Shopping</a>
+    </div>
+
+    @if (cartService.items().length) {
+      <div class="cart-layout">
+        <div class="cart-items">
+          @for (item of cartService.items(); track item.product.id) {
+            <article class="cart-item">
+              <div class="mini-cover" [style.background]="item.product.cover"></div>
+              <div class="item-info">
+                <h3>{{ item.product.title }}</h3>
+                <p>{{ item.product.author }} · {{ item.product.format }}</p>
+                <strong>{{ item.product.price | currency }}</strong>
+              </div>
+              <div class="qty">
+                <button (click)="cartService.decrease(item.product.id)">−</button>
+                <span>{{ item.quantity }}</span>
+                <button (click)="cartService.increase(item.product.id)">+</button>
+              </div>
+              <button class="remove" (click)="cartService.remove(item.product.id)">🗑</button>
+            </article>
+          }
+        </div>
+
+        <aside class="summary">
+          <h2>Order Summary</h2>
+          <div><span>Subtotal</span><strong>{{ cartService.total() | currency }}</strong></div>
+          <div><span>Delivery Fee</span><strong>{{ delivery | currency }}</strong></div>
+          <div><span>Discount</span><strong class="green">- $0.00</strong></div>
+          <hr>
+          <div class="total"><span>Total</span><strong>{{ total() | currency }}</strong></div>
+          <p>You are ${{ Math.max(0, 25 - cartService.total()).toFixed(2) }} away from free delivery!</p>
+          <button class="dark-btn">Proceed to Checkout</button>
+        </aside>
+      </div>
+    } @else {
+      <div class="empty-cart">
+        <div>🛒</div>
+        <h2>Your cart is empty</h2>
+        <p>Start adding your favorite books.</p>
+        <a routerLink="/products" class="primary-btn">Shop Books</a>
+      </div>
+    }
+  </section>
+</main>
