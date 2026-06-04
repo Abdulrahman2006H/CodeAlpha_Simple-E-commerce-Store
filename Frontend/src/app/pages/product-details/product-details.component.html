@@ -1,0 +1,57 @@
+<main class="details-page container">
+  @if (product(); as book) {
+    <div class="breadcrumb">Home › {{ book.category }} › {{ book.title }}</div>
+
+    <section class="details-card">
+      <div class="cover-big" [style.background]="book.cover">
+        <div class="cover-inner">
+          <span>{{ book.title }}</span>
+          <small>{{ book.author }}</small>
+        </div>
+      </div>
+
+      <div class="details-info">
+        <button class="heart">♡</button>
+        <h1>{{ book.title }}</h1>
+        <p class="author">by {{ book.author }}</p>
+        <div class="rating">★ {{ book.rating }} <span>(1,245 reviews)</span> <b>Bestseller</b></div>
+        <div class="price">
+          <strong>{{ book.price | currency }}</strong>
+          @if (book.oldPrice) { <span>{{ book.oldPrice | currency }}</span> }
+          <em>25% OFF</em>
+        </div>
+        <div class="formats">
+          <button class="active">Paperback</button>
+          <button>Hardcover</button>
+          <button>eBook</button>
+        </div>
+        <p class="desc">{{ book.description }}</p>
+
+        <div class="qty-row">
+          <span>Quantity</span>
+          <div class="qty">
+            <button (click)="decrement()">−</button>
+            <strong>{{ quantity() }}</strong>
+            <button (click)="increment()">+</button>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <button class="primary-btn" (click)="addToCart()">Add to Cart</button>
+          <a routerLink="/cart" class="gold-btn">Buy Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-features">
+      <div>🚚 <strong>Free delivery</strong><span>on orders over $25</span></div>
+      <div>⚡ <strong>Ships in 1-2 days</strong><span>Fast & Reliable</span></div>
+      <div>↩️ <strong>30-Day Returns</strong><span>Hassle-free</span></div>
+    </section>
+  } @else {
+    <section class="not-found">
+      <h1>Book not found</h1>
+      <a routerLink="/products" class="primary-btn">Back to Shop</a>
+    </section>
+  }
+</main>
