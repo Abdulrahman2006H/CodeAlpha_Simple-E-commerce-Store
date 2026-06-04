@@ -13,8 +13,6 @@
   <nav class="links">
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
     <a routerLink="/products" routerLinkActive="active">Categories</a>
-    <a routerLink="/products" routerLinkActive="active">Best Sellers</a>
-    <a routerLink="/products" routerLinkActive="active">New Arrivals</a>
     <a href="#offers">Offers</a>
   </nav>
 
@@ -37,7 +35,7 @@
 
     @if (user; as currentUser) {
       <button class="user-pill" type="button" (click)="logout()" title="Logout">
-        {{ currentUser.name.charAt(0) }}
+        {{ currentUser.user?.fullName?.charAt(0) || '#' }}
       </button>
     } @else {
       <a routerLink="/login" class="login-link">Login</a>

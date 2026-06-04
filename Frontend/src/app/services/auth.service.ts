@@ -30,7 +30,8 @@ export class AuthService {
     return this.http.post(`${this.apiUrl}/login`, data).pipe(
       tap((res: any) => {
         localStorage.setItem('user', JSON.stringify(res));
-
+        alert("Login successful!");
+        
         if (res.token) {
           localStorage.setItem('token', res.token);
         }

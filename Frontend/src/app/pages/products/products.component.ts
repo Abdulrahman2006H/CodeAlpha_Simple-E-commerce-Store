@@ -12,7 +12,7 @@ import { Product } from '../../models/product.model';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent implements OnInit {
-  products: Product[] = [];
+products = signal<Product[]>([]);
   categories: string[] = ['All', 'Fiction', 'Self Development', 'Business', 'Children', 'History', 'Science', 'Novels'];
 
   search = signal('');
@@ -25,7 +25,8 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     this.productService.getProducts().subscribe({
       next: (data) => {
-        this.products = data;
+        this.products.set(data);
+        //console.log(this.products);
         this.loading = false;
       },
       error: (err) => {
@@ -34,17 +35,23 @@ export class ProductsComponent implements OnInit {
       }
     });
   }
-  filteredProducts = computed(() => {
+
+filteredProducts = computed(() => {
   const searchValue = this.search().toLowerCase().trim();
   const category = this.selectedCategory();
 
-  return this.products.filter(product => {
+  return this.products().filter(product => {
+    const title = product.title?.toLowerCase() || '';
+    const author = product.author?.toLowerCase() || '';
+    const productCategory = product.category?.trim().toLowerCase() || '';
+
     const matchesSearch =
-      product.title.toLowerCase().includes(searchValue) ||
-      product.author.toLowerCase().includes(searchValue);
+      title.includes(searchValue) ||
+      author.includes(searchValue);
 
     const matchesCategory =
-      category === 'All' || product.category === category;
+      category === 'All' ||
+      productCategory === category.trim().toLowerCase();
 
     return matchesSearch && matchesCategory;
   });

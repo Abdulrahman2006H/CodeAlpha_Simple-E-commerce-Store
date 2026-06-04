@@ -19,5 +19,7 @@ export class NavbarComponent {
 
   logout(): void {
     this.authService.logout();
+    window.location.reload();
+
   }
 }

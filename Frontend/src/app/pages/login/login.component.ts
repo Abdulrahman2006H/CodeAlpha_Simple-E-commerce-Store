@@ -25,6 +25,8 @@ this.authService.login({
 }).subscribe({
   next: (res) => {
     this.router.navigateByUrl('/');
+    window.location.reload();
+
   },
   error: (err) => {
     console.error('Login failed', err);
