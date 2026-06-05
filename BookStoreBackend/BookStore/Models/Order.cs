@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.Models;
 
@@ -12,6 +11,18 @@ public partial class Order
     public int Id { get; set; }
 
     public int UserId { get; set; }
+
+    [StringLength(100)]
+    public string? CustomerName { get; set; }
+
+    [StringLength(150)]
+    public string? CustomerEmail { get; set; }
+
+    [StringLength(50)]
+    public string? CustomerPhone { get; set; }
+
+    [StringLength(300)]
+    public string? Address { get; set; }
 
     [Column(TypeName = "decimal(18, 2)")]
     public decimal TotalPrice { get; set; }
