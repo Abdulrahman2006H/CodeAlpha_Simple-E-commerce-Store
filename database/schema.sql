@@ -79,3 +79,11 @@ VALUES
 ('Deep Work', 'Cal Newport', 'A book about focus and productivity.', 320.00, 'assets/images/deep-work.jpg', 'Productivity', 18);
 
 SELECT * FROM Books;
+
+
+
+ALTER TABLE Orders
+ADD CustomerName NVARCHAR(100) NULL,
+    CustomerEmail NVARCHAR(150) NULL,
+    CustomerPhone NVARCHAR(50) NULL,
+    Address NVARCHAR(300) NULL;
