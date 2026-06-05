@@ -276,7 +276,7 @@
         }
       }
     },
-    "/api/Orders/user/{id}": {
+    "/api/Orders/order/{id}": {
       "get": {
         "tags": [
           "Orders"
@@ -351,6 +351,29 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Orders/user/{userId}": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"

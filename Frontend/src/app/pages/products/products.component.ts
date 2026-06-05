@@ -13,7 +13,7 @@ import { Product } from '../../models/product.model';
 })
 export class ProductsComponent implements OnInit {
 products = signal<Product[]>([]);
-  categories: string[] = ['All', 'Finance', 'Self Development', 'Business', 'Children', 'History', 'Science', 'Novels'];
+  categories: string[] = ['All', 'Self Development', 'History', 'Science', 'Novels'];
 
   search = signal('');
   selectedCategory = signal('All');

@@ -67,7 +67,15 @@
 .checkout-form textarea:focus {
   border-color: #064221;
 }
-
+.checkout-btn{
+border: 0;
+    padding: 13px 18px;
+    border-radius: 14px;
+    background: #ffc538;
+    color: #021f13;
+    font-weight: 800;
+    cursor: pointer;
+}
 .primary-btn {
   width: 100%;
   border: 0;

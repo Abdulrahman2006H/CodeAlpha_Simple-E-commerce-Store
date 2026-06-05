@@ -121,7 +121,15 @@
   object-fit: cover;
 }
 
-
+.checkout-btn{
+  border: 0;
+    padding: 13px 18px;
+    border-radius: 14px;
+    background: #ffc538;
+    color: #021f13;
+    font-weight: 800;
+    cursor: pointer;
+}
 .empty-cart div { font-size: 72px; }
 .empty-cart h2 { margin: 0; font-size: 34px; }
 .empty-cart p { color: var(--muted); }

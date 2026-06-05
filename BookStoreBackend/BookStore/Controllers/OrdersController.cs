@@ -25,10 +25,29 @@ namespace BookStore.Api.Controllers
                 .OrderByDescending(o => o.CreatedAt)
                 .ToListAsync();
 
-            return Ok(orders);
+            return Ok(new
+            {
+                orders = orders.Select(o => new
+                {
+                    o.Id,
+                    o.CustomerName,
+                    o.CustomerEmail,
+                    o.CustomerPhone,
+                    o.Address,
+                    o.TotalPrice,
+                    o.CreatedAt,
+                    o.Status,
+                    Items = o.OrderItems.Select(i => new
+                    {
+                        i.BookId,
+                        i.Quantity,
+                        i.Price
+                    })
+                })
+            });
         }
 
-        [HttpGet("user/{id}")]
+        [HttpGet("order/{id}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
             var order = await _context.Orders
@@ -139,5 +158,38 @@ namespace BookStore.Api.Controllers
 
             return NoContent();
         }
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetOrdersByUser(int userId)
+        {
+            var orders = await _context.Orders
+                .Where(o => o.UserId == userId)
+                .OrderByDescending(o => o.CreatedAt)
+                .Select(o => new
+                {
+                    o.Id,
+                    o.UserId,
+                    o.CustomerName,
+                    o.CustomerEmail,
+                    o.CustomerPhone,
+                    o.Address,
+                    o.TotalPrice,
+                    o.CreatedAt,
+                    o.Status,
+
+                    Items = o.OrderItems.Select(i => new
+                    {
+                        i.BookId,
+                        BookTitle = i.Book.Title,
+                        BookAuthor = i.Book.Author,
+                        i.Quantity,
+                        i.Price,
+                        SubTotal = i.Price * i.Quantity
+                    }).ToList()
+                })
+                .ToListAsync();
+
+            return Ok(orders);
+        }
     }
+
 }

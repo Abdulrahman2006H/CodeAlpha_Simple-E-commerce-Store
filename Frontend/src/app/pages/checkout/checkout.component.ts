@@ -33,7 +33,7 @@ constructor(
     this.errorMessage = '';
 
     const userId = this.authService.getUserId();
-
+    console.log(userId);
     if (!userId) {
       this.errorMessage = 'Please login first.';
       this.router.navigateByUrl('/login');
@@ -53,7 +53,7 @@ constructor(
     }
 
     const order = {
-      userId: Number(userId),
+      userId: userId,
       customerName: this.customerName,
       customerEmail: this.customerEmail,
       customerPhone: this.customerPhone,

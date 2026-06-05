@@ -3,12 +3,9 @@
     <div class="breadcrumb">Home › {{ book.category }} › {{ book.title }}</div>
 
     <section class="details-card">
-      <div class="cover-big" [style.background]="book.cover">
-        <div class="cover-inner">
-          <span>{{ book.title }}</span>
-          <small>{{ book.author }}</small>
-        </div>
-      </div>
+<div class="cover-big">
+  <img [src]="book.image || book.cover" [alt]="book.title">
+</div>
 
       <div class="details-info">
         <button class="heart">♡</button>

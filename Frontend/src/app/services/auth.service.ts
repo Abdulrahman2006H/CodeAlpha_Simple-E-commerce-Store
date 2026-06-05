@@ -73,6 +73,6 @@ getUser(): any {
   user = user.user;
   if (!user) return null;
 
-  return user.id || user.userId || user.Id || user.UserId || null;
+  return user.id;
 }
 }

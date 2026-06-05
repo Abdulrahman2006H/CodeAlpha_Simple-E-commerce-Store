@@ -26,6 +26,7 @@ this.authService.register({
   password: this.password
 }).subscribe({
   next: (res) => {
+    alert('Registration successful!');
     this.router.navigateByUrl('/');
   },
   error: (err) => {
