@@ -1,18 +1,14 @@
-<a class="book-card" [routerLink]="['/products', product.id]">
-  <div class="cover" [style.background]="product.cover">
-    <div class="cover-inner">
-      <span class="book-title">{{ product.title }}</span>
-      <small>{{ product.author }}</small>
-    </div>
-  </div>
+<a class="cover" [routerLink]="['/products', product.id]">
+  <img [src]="product.image" [alt]="product.title">
+</a>
 
-  <div class="info">
-    <h3>{{ product.title }}</h3>
-    <p>{{ product.author }}</p>
-    <div class="rating">★ {{ product.rating }}</div>
+<div class="product-info">
+  <h3>{{ product.title }}</h3>
+  <p>{{ product.author }}</p>
+  <span class="rating">★ {{ product.rating }}</span>
     <div class="bottom">
       <strong>{{ product.price | currency }}</strong>
       <button (click)="add($event)" aria-label="Add to cart">🛒</button>
     </div>
   </div>
-</a>
+

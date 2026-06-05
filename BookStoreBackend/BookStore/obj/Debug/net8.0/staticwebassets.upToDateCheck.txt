@@ -1,0 +1,10 @@
+wwwroot\images\books\atomic-mornings.png
+wwwroot\images\books\code-of-light.png
+wwwroot\images\books\deep-focus.png
+wwwroot\images\books\echoes-in-cairo.png
+wwwroot\images\books\garden-of-numbers.png
+wwwroot\images\books\midnight-train-to-mars.png
+wwwroot\images\books\small-habits-big-change.png
+wwwroot\images\books\the-healing-house.png
+wwwroot\images\books\the-last-library.png
+wwwroot\images\books\the-quiet-horizon.png

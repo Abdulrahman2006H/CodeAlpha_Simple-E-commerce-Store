@@ -5,6 +5,10 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 import { CartComponent } from './pages/cart/cart.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { MyOrdersComponent } from './pages/my-orders/my-orders.component';
+
+
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,5 +17,7 @@ export const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'checkout', component: CheckoutComponent },
+{ path: 'my-orders', component: MyOrdersComponent },
   { path: '**', redirectTo: '' }
 ];

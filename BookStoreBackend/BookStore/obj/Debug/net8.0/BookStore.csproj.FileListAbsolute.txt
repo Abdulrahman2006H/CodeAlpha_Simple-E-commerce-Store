@@ -145,3 +145,4 @@ C:\Users\Abdo Hossam\Desktop\AlpahCode\Simple E-commerce Store\BookStoreBackend\
 C:\Users\Abdo Hossam\Desktop\AlpahCode\Simple E-commerce Store\BookStoreBackend\BookStore\obj\Debug\net8.0\BookStore.pdb
 C:\Users\Abdo Hossam\Desktop\AlpahCode\Simple E-commerce Store\BookStoreBackend\BookStore\obj\Debug\net8.0\BookStore.genruntimeconfig.cache
 C:\Users\Abdo Hossam\Desktop\AlpahCode\Simple E-commerce Store\BookStoreBackend\BookStore\obj\Debug\net8.0\ref\BookStore.dll
+C:\Users\Abdo Hossam\Desktop\AlpahCode\Simple E-commerce Store\BookStoreBackend\BookStore\bin\Debug\net8.0\BookStore.staticwebassets.runtime.json

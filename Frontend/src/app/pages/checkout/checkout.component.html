@@ -1,0 +1,81 @@
+<main class="checkout-page container">
+  <div class="breadcrumb">
+    <a routerLink="/">Home</a> ›
+    <a routerLink="/cart">Cart</a> ›
+    Checkout
+  </div>
+
+  <section class="checkout-layout">
+    <form class="checkout-form" (ngSubmit)="submitOrder()">
+      <h1>Checkout</h1>
+      <p>Complete your delivery information.</p>
+
+      @if (errorMessage) {
+        <div class="error-box">{{ errorMessage }}</div>
+      }
+
+      <label>
+        Full Name
+        <input
+          type="text"
+          name="customerName"
+          [(ngModel)]="customerName"
+          placeholder="Enter your full name"
+        />
+      </label>
+
+      <label>
+        Email
+        <input
+          type="email"
+          name="customerEmail"
+          [(ngModel)]="customerEmail"
+          placeholder="Enter your email"
+        />
+      </label>
+
+      <label>
+        Phone
+        <input
+          type="text"
+          name="customerPhone"
+          [(ngModel)]="customerPhone"
+          placeholder="Enter your phone number"
+        />
+      </label>
+
+      <label>
+        Address
+        <textarea
+          name="address"
+          [(ngModel)]="address"
+          placeholder="Enter your delivery address"
+        ></textarea>
+      </label>
+
+      <button class="primary-btn" type="submit" [disabled]="loading">
+        {{ loading ? 'Placing Order...' : 'Place Order' }}
+      </button>
+    </form>
+
+    <aside class="order-summary">
+      <h2>Order Summary</h2>
+
+      @for (item of cartService.getCart(); track item.product.id) {
+        <div class="summary-item">
+          <div>
+            <strong>{{ item.product.title }}</strong>
+            <span>Qty: {{ item.quantity }}</span>
+          </div>
+
+          <b>{{ item.product.price * item.quantity | currency }}</b>
+        </div>
+      }
+
+      <div class="summary-total">
+        <span>Total</span>
+        <strong>{{ cartService.getTotal() | currency }}</strong>
+      </div>
+    </aside>
+  </section>
+</main>

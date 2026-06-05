@@ -9,7 +9,7 @@ interface LoginRequest {
 }
 
 interface RegisterRequest {
-  name: string;
+  fullName: string;
   email: string;
   password: string;
 }
@@ -46,14 +46,33 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('user');
     localStorage.removeItem('token');
+    localStorage.removeItem('bookmuse-cart');
+
   }
 
   isLoggedIn(): boolean {
     return !!localStorage.getItem('user') || !!localStorage.getItem('token');
   }
 
-  getUser(): any {
-    const user = localStorage.getItem('user');
-    return user ? JSON.parse(user) : null;
+getUser(): any {
+  const user = localStorage.getItem('user');
+
+  if (!user) {
+    return null;
   }
+
+  try {
+    return JSON.parse(user);
+  } catch {
+    return null;
+  }
+}
+
+  getUserId(): number | null {
+  let user = this.getUser();
+  user = user.user;
+  if (!user) return null;
+
+  return user.id || user.userId || user.Id || user.UserId || null;
+}
 }

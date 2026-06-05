@@ -37,7 +37,16 @@ export class ProductService {
   }
 
 private mapBookToProduct(book: any): Product {
-  const cover = book.cover || book.image || book.imageUrl || 'assets/images/book-placeholder.png';
+  const coverPath =
+    book.imageUrl ||
+    book.ImageUrl ||
+    book.cover ||
+    book.image ||
+    '/images/books/book-placeholder.jpg';
+
+  const image = coverPath.startsWith('http')
+    ? coverPath
+    : `${environment.serverUrl}${coverPath}`;
 
   return {
     id: book.id,
@@ -48,8 +57,8 @@ private mapBookToProduct(book: any): Product {
     oldPrice: book.oldPrice,
     rating: book.rating || 4.5,
 
-    cover: cover,
-    image: cover,
+    image: image,
+    cover: image,
 
     description: book.description || 'No description available.',
     format: book.format || 'Paperback'

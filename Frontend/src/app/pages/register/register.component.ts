@@ -21,7 +21,7 @@ export class RegisterComponent {
   submit(): void {
     if (!this.name || !this.email || !this.password) return;
 this.authService.register({
-  name: this.name,
+  fullName: this.name,
   email: this.email,
   password: this.password
 }).subscribe({

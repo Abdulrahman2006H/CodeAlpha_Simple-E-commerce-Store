@@ -6,10 +6,10 @@ export interface Product {
   price: number;
   oldPrice?: number;
   rating: number;
-  format: 'Paperback' | 'Hardcover' | 'eBook';
   image: string;
   cover: string;
   description: string;
+  format: string;
 }
 
 export interface CartItem {

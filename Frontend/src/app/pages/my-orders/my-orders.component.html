@@ -1,0 +1,57 @@
+<main class="orders-page container">
+  <div class="breadcrumb">
+    <a routerLink="/">Home</a> › My Orders
+  </div>
+
+  <section class="orders-card">
+    <h1>My Orders</h1>
+    <p>Track your book orders and order status.</p>
+
+    @if (loading) {
+      <div class="state-box">Loading orders...</div>
+    }
+
+    @if (errorMessage) {
+      <div class="error-box">{{ errorMessage }}</div>
+    }
+
+    @if (!loading && orders.length === 0) {
+      <div class="state-box">
+        You have no orders yet.
+        <a routerLink="/products">Start shopping</a>
+      </div>
+    }
+
+    @for (order of orders; track order.id) {
+      <article class="order-item">
+        <div class="order-head">
+          <div>
+            <strong>Order #{{ order.id }}</strong>
+            <span>{{ order.createdAt | date:'medium' }}</span>
+          </div>
+
+          <b class="status">{{ order.status }}</b>
+        </div>
+
+        <div class="order-info">
+          <p><strong>Total:</strong> {{ order.totalPrice | currency }}</p>
+          <p><strong>Address:</strong> {{ order.address }}</p>
+          <p><strong>Phone:</strong> {{ order.customerPhone }}</p>
+        </div>
+
+        <div class="order-books">
+          @for (item of order.items; track item.id) {
+            <div class="book-line">
+              <span>
+                {{ item.book?.title || item.book?.name || 'Book' }}
+                × {{ item.quantity }}
+              </span>
+
+              <strong>{{ item.price * item.quantity | currency }}</strong>
+            </div>
+          }
+        </div>
+      </article>
+    }
+  </section>
+</main>

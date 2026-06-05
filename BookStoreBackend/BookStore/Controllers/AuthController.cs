@@ -50,10 +50,10 @@ public class AuthController : ControllerBase
         if (user.PasswordHash != dto.Password) 
             return Unauthorized("Invalid email or password");
 
-        return Ok(new
+        return Ok(
+        new
         {
-            message = "Login successful",
-            user = new { user.Id, user.FullName, user.Email, user.PasswordHash }
+            User = new{ user.Id, user.FullName, user.Email, user.PasswordHash }
         });
     }
 }

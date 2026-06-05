@@ -22,20 +22,18 @@
       <input placeholder="Search for books, authors..." />
     </label>
 
-    <button class="icon-btn" aria-label="Wishlist">
-      <svg viewBox="0 0 24 24"><path d="M20.8 5.6c-1.7-2-4.7-2.1-6.5-.3L12 7.6 9.7 5.3C7.9 3.5 4.9 3.6 3.2 5.6c-1.5 1.8-1.4 4.5.3 6.2L12 20l8.5-8.2c1.7-1.7 1.8-4.4.3-6.2Z"/></svg>
-    </button>
-
     <a routerLink="/cart" class="cart-btn" aria-label="Cart">
       <svg viewBox="0 0 24 24"><path d="M6.5 6h14l-1.6 8.1a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.6L5.8 3H3"/><path d="M9.5 20a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6ZM17.5 20a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6Z"/></svg>
       @if (cartCount() > 0) {
         <span>{{ cartCount() }}</span>
       }
     </a>
-
+@if (authService.user) {
+  <a routerLink="/my-orders" class="my-orders-link">My Orders</a>
+}
     @if (user; as currentUser) {
       <button class="user-pill" type="button" (click)="logout()" title="Logout">
-        {{ currentUser.user?.fullName?.charAt(0) || '#' }}
+        {{ currentUser.user?.fullName || '#' }} <span class = "logout-icon">➜]</span>
       </button>
     } @else {
       <a routerLink="/login" class="login-link">Login</a>

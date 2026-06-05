@@ -18,6 +18,16 @@ namespace BookStore
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<BookStoreDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngular", policy =>
+                {
+                    policy
+                        .WithOrigins("http://localhost:4200")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -28,7 +38,8 @@ namespace BookStore
             }
 
             app.UseAuthorization();
-
+            app.UseCors("AllowAngular");
+            app.UseStaticFiles();
 
             app.MapControllers();
 

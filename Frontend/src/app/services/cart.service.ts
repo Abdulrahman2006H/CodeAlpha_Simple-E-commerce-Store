@@ -54,4 +54,19 @@ export class CartService {
     const cart = localStorage.getItem(this.storageKey);
     return cart ? JSON.parse(cart) as CartItem[] : [];
   }
+
+  getCart(): any[] {
+  const cart = localStorage.getItem('bookmuse-cart');
+  return cart ? JSON.parse(cart) : [];
+}
+
+clearCart(): void {
+  localStorage.removeItem('cart');
+}
+
+getTotal(): number {
+  return this.getCart().reduce((total, item) => {
+    return total + item.product.price * item.quantity;
+  }, 0);
+}
 }

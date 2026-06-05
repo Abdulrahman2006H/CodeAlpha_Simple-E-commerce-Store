@@ -28,7 +28,7 @@ namespace BookStore.Api.Controllers
             return Ok(orders);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("user/{id}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
             var order = await _context.Orders
@@ -39,7 +39,24 @@ namespace BookStore.Api.Controllers
             if (order == null)
                 return NotFound();
 
-            return Ok(order);
+            return Ok(new
+            {
+                order.Id,
+                order.CustomerName,
+                order.CustomerEmail,
+                order.CustomerPhone,
+                order.Address,
+                order.TotalPrice,
+                order.CreatedAt,
+                order.Status,
+                Items = order.OrderItems.Select(i => new
+                {
+                    
+                    i.BookId,
+                    i.Quantity,
+                    i.Price
+                })
+            });
         }
 
         [HttpPost]
@@ -97,8 +114,17 @@ namespace BookStore.Api.Controllers
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetOrder), new { id = order.Id }, order);
+            return Ok(new
+            {
+                message = "Order created successfully",
+                orderId = order.Id,
+                totalPrice = order.TotalPrice,
+                status = order.Status,
+                createdAt = order.CreatedAt
+            });
         }
+
+
         [HttpPut("{id}/status")]
         public async Task<IActionResult> UpdateOrderStatus(int id, [FromBody] string status)
         {

@@ -3,29 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdo Hossam\\AppData\\Local\\Temp\\ej022cnd..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+      "AbsoluteMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|c:\\users\\abdo hossam\\desktop\\alpahcode\\simple e-commerce store\\bookstorebackend\\bookstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|c:\\users\\abdo hossam\\desktop\\alpahcode\\simple e-commerce store\\bookstorebackend\\bookstore\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|c:\\users\\abdo hossam\\desktop\\alpahcode\\simple e-commerce store\\bookstorebackend\\bookstore\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|c:\\users\\abdo hossam\\desktop\\alpahcode\\simple e-commerce store\\bookstorebackend\\bookstore\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|c:\\users\\abdo hossam\\desktop\\alpahcode\\simple e-commerce store\\bookstorebackend\\bookstore\\dtos\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\dtos\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|c:\\users\\abdo hossam\\desktop\\alpahcode\\simple e-commerce store\\bookstorebackend\\bookstore\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|c:\\users\\abdo hossam\\desktop\\alpahcode\\simple e-commerce store\\bookstorebackend\\bookstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdo Hossam\\AppData\\Local\\Temp\\ej022cnd..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Abdo Hossam\\AppData\\Local\\Temp\\ej022cnd..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+      "AbsoluteMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|c:\\users\\abdo hossam\\desktop\\alpahcode\\simple e-commerce store\\bookstorebackend\\bookstore\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A93510A7-C15F-4E4C-80AA-DAA5FB4C014F}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,63 +38,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SQLQuery1.sql ",
-              "DocumentMoniker": "C:\\Users\\Abdo Hossam\\AppData\\Local\\Temp\\ej022cnd..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\ej022cnd..sql",
-              "ToolTip": "SQLQuery1.sql *",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-06-04T16:32:18.815Z",
+              "DocumentIndex": 4,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "BookStore\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Models\\Order.cs",
+              "RelativeToolTip": "BookStore\\Models\\Order.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T05:33:48.55Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "BookStore\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "BookStore\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAADUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T05:31:57.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateOrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Dtos\\CreateOrderDto.cs",
+              "RelativeDocumentMoniker": "BookStore\\Dtos\\CreateOrderDto.cs",
+              "ToolTip": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Dtos\\CreateOrderDto.cs",
+              "RelativeToolTip": "BookStore\\Dtos\\CreateOrderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T05:29:30.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "BookStore\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Controllers\\AuthController.cs",
               "RelativeToolTip": "BookStore\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA+wBEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwDUAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-04T16:25:18.267Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Dtos\\LoginDto.cs",
-              "RelativeDocumentMoniker": "BookStore\\Dtos\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Dtos\\LoginDto.cs",
-              "RelativeToolTip": "BookStore\\Dtos\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T16:24:30.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegisterDto.cs",
-              "DocumentMoniker": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Dtos\\RegisterDto.cs",
-              "RelativeDocumentMoniker": "BookStore\\Dtos\\RegisterDto.cs",
-              "ToolTip": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Dtos\\RegisterDto.cs",
-              "RelativeToolTip": "BookStore\\Dtos\\RegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T16:24:06.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Program.cs",
               "RelativeDocumentMoniker": "BookStore\\Program.cs",
               "ToolTip": "C:\\Users\\Abdo Hossam\\Desktop\\AlpahCode\\Simple E-commerce Store\\BookStoreBackend\\BookStore\\Program.cs",
               "RelativeToolTip": "BookStore\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-04T16:17:32.021Z",
               "EditorCaption": ""

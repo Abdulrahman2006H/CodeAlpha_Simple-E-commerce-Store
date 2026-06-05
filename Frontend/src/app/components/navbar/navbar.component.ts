@@ -12,7 +12,8 @@ import { AuthService } from '../../services/auth.service';
 })
 export class NavbarComponent {
   private readonly cartService = inject(CartService);
-  private readonly authService = inject(AuthService);
+  public readonly authService = inject(AuthService);
+
 
   readonly cartCount = computed(() => this.cartService.count());
   readonly user = this.authService.user;
@@ -20,6 +21,7 @@ export class NavbarComponent {
   logout(): void {
     this.authService.logout();
     window.location.reload();
+    window.location.href = '/';
 
   }
 }
